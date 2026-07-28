@@ -1,0 +1,9 @@
+devices:
+-   name: dev_pid_4144
+    pid: 4144
+    vid: 5264
+    flow: '0'
+    discovery: 2
+    pincode: 94362201
+    short_discriminator: 0
+    long_discriminator: 220

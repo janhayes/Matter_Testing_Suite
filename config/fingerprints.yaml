@@ -1,0 +1,241 @@
+devices:
+  - name: "C1 - onoff toggle"
+    category: "Switch"
+    packets: 3
+    signature:
+      - length: 59
+        direction: controller_to_device
+      - length: 67
+        direction: "device_to_controller"
+      - length: 34
+        direction: "controller_to_device"
+  - name: C2 - onoff read on-off
+    packets: 3
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 69
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C3 - levelcontrol move-to-level
+    packets: 3
+    signature:
+    -   length: 71
+        direction: controller_to_device
+    -   length: 67
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C4 - airquality read air-quality
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: "C5 - temperaturemeasurement read measured-value"
+    category: new 
+    packets: 3
+    event: custom event 
+    signature:
+    -   length: 52
+        direction: controller_to_device
+    -   length: 72
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: "C6 - relativehumiditymeasurement read measured-value"
+    category: new 
+    packets: 3
+    event: custom event 
+    signature:
+    -   length: 52
+        direction: controller_to_device
+    -   length: 72
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: "C7 - carbondioxideconcentrationmeasurement read measured-value"
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 52
+        direction: controller_to_device
+    -   length: 74
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: "C8 - pm25concentrationmeasurement read measured-value"
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 52
+        direction: controller_to_device
+    -   length: 74
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C9 - electricalpowermeasurement read active-power
+    packets: 3
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C10 - electricalenergymeasurement read cumulative-energy-imported
+    packets: 3
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 73
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C11 - channel change-channel
+    packets: 3
+    signature:
+    -   length: 64
+        direction: controller_to_device
+    -   length: 68
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C12 - mediaplayback play/pause
+    packets: 3
+    signature:
+    -   length: 60
+        direction: controller_to_device
+    -   length: 84
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C13 - booleanstate read state-value
+    packets: 3
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 69
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C14 - doorlock read lock-state
+    packets: 3
+    signature:
+    -   length: 52
+        direction: controller_to_device
+    -   length: 71
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name:  C15 - doorlock unlock/lock-door
+    category: new
+    packets: 5
+    event: Placeholder
+    signature:
+    -   length: 39
+        direction: controller_to_device
+    -   length: 42
+        direction: device_to_controller
+    -   length: 64
+        direction: controller_to_device
+    -   length: 68
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name:  C16 - doorlock unbolt-door
+    category: new
+    packets: 5
+    event: Placeholder
+    signature:
+    -   length: 39
+        direction: controller_to_device
+    -   length: 42
+        direction: device_to_controller
+    -   length: 64
+        direction: controller_to_device
+    -   length: 68
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C17 - microwaveovencontrol read watt-rating
+    packets: 3
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 71
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C18 - microwaveovencontrol read power-setting
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C19 - microwaveovencontrol read cook-time
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C20 - microwaveovenmode read supported-modes
+    packets: 3
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 117
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C21 - microwaveovenmode read current-mode
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C22 - operationalstate read operational-state
+    category: new
+    packets: 3
+    event: custom event
+    signature:
+    -   length: 51
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
+  - name: C23 - operationalstate start/stop/pause/resume
+    category: new
+    packets: 3
+    event: Placeholder
+    signature:
+    -   length: 59
+        direction: controller_to_device
+    -   length: 70
+        direction: device_to_controller
+    -   length: 34
+        direction: controller_to_device
